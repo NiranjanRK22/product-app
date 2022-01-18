@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tabs } from './models/tabs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'product-app-material';
+  tabs:Tabs[] = []
+  constructor() {
+    this.tabs = [
+      {
+        label: 'Home', route: 'home', active: true
+      },
+      {
+        label: 'Products', route: 'products', active: false
+      }
+    ]
+  }
 }
